@@ -1,0 +1,11 @@
+C:\Dev\T4L\T4L.Domain\bin\Debug\netstandard2.0\T4L.Domain.deps.json
+C:\Dev\T4L\T4L.Domain\bin\Debug\netstandard2.0\T4L.Domain.dll
+C:\Dev\T4L\T4L.Domain\bin\Debug\netstandard2.0\T4L.Domain.pdb
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.csproj.AssemblyReference.cache
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.csproj.SuggestedBindingRedirects.cache
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.AssemblyInfoInputs.cache
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.AssemblyInfo.cs
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.csproj.CoreCompileInputs.cache
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.dll
+C:\Dev\T4L\T4L.Domain\obj\Debug\netstandard2.0\T4L.Domain.pdb

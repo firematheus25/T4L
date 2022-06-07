@@ -1,0 +1,92 @@
+﻿<Window x:Class="T4L.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="" Height="800" Width="650"
+        SizeToContent="WidthAndHeight" 
+        ResizeMode="NoResize">
+    <Grid Background="#FF0098DA">
+        <StackPanel Orientation="Horizontal" Background="#FF0098DA" Margin="0,0,0,697">
+            <materialDesign:PackIcon Kind="ShoppingCartPlus" FontSize="28" Height="50" Width="50" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Produtos</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Background="#FF0098DA" Margin="0,87,0,654">
+            <Button Name="btCadastro" Width="325" Background="#FF0098DA" Content="Cadastro de Produtos" Foreground="white" Click="btCadastro_Click"></Button>
+            <Button Name="btConsulta" Width="325" Background="#FF0098DA" Content="Consulta de Produtos" Foreground="white" Click="btConsulta_Click"></Button>
+        </StackPanel>
+
+
+
+
+        <Canvas Name="cvCadastro" Margin="10,135,10,10" RenderTransformOrigin="0.377,0.49" Background="White" >
+            <materialDesign:PackIcon Kind="Text"  Height="51" Width="35" RenderTransformOrigin="0.571,0.432" Canvas.Left="75" Canvas.Top="7" />
+            <TextBox Name="txbDescricao" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Descrição*" Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextWrapping="Wrap" VerticalAlignment="Center" Width="365" Canvas.Left="120" Canvas.Top="10"/>
+            <materialDesign:PackIcon Kind="Group"  Height="51" Width="35" RenderTransformOrigin="0.571,0.432" Canvas.Left="75" Canvas.Top="79" HorizontalAlignment="Center" />
+            <ComboBox  DisplayMemberPath="Nome" SelectedValuePath="Cod" Name="cbbGrupoProduto" materialDesign:HintAssist.Hint="Grupo Produto*" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="120" Canvas.Left="120                      " Canvas.Top="79" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <materialDesign:PackIcon Kind="Barcode"  Height="51" Width="35" RenderTransformOrigin="0.571,0.432" Canvas.Left="75" Canvas.Top="148" HorizontalAlignment="Center" />
+            <TextBox Name="txbCodigoBarra" HorizontalAlignment="Center" TextWrapping="Wrap"  Width="365" materialDesign:HintAssist.Hint="Código de Barra" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Canvas.Left="120" Canvas.Top="148" RenderTransformOrigin="0.4,4.178" VerticalAlignment="Top"/>
+            <materialDesign:PackIcon Kind="Cash"  Height="51" Width="35" RenderTransformOrigin="0.571,0.432" Canvas.Left="75" Canvas.Top="229" HorizontalAlignment="Center" />
+            <TextBox Name="txbPrecoCusto" materialDesign:HintAssist.Hint="Preço Custo*" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="120" RenderTransformOrigin="0.888,-6.791" Canvas.Left="120" Canvas.Top="229" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <materialDesign:PackIcon Kind="CashMultiple"  Height="51" Width="35" RenderTransformOrigin="0.571,0.432" Canvas.Left="75" Canvas.Top="294" HorizontalAlignment="Center" />
+            <TextBox Name="txbPrecoVenda" materialDesign:HintAssist.Hint="Preço Venda*" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="120" RenderTransformOrigin="0.888,-6.791" Canvas.Left="120" Canvas.Top="301" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <materialDesign:PackIcon Kind="CheckBox"  Height="51" Width="35" RenderTransformOrigin="0.571,0.432" Canvas.Left="75" Canvas.Top="362" HorizontalAlignment="Center" />
+            <CheckBox  Name="txbAtivo" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="120" Canvas.Top="378"/>
+
+            <Button x:Name="btnSalvar" Height="30" BorderThickness="5" Click="BtnSalvar_Click" ToolTip="Salvar Registro" Focusable="False" Canvas.Left="458" Canvas.Top="593" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Grid Width="130">
+                    <materialDesign:PackIcon Kind="ContentSave"/>
+                    <TextBlock Text="Salvar" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button x:Name="btnAtualizar" Height="30" BorderThickness="5" Click="BtnAtualizar_Click" ToolTip="Atualizar Registro" Focusable="False" Canvas.Left="458" Canvas.Top="593">
+                <Grid Width="130">
+                    <materialDesign:PackIcon Kind="Update"/>
+                    <TextBlock Text="Atualizar" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button x:Name="btnDeletar" Height="30" BorderThickness="5" Click="BtnDeletar_Click" ToolTip="Remover Registro" Focusable="False" HorizontalAlignment="Center" Canvas.Left="10" Canvas.Top="593" VerticalAlignment="Top">
+                <Grid Width="130">
+                    <materialDesign:PackIcon Kind="Delete"/>
+                    <TextBlock Text="Remover" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button x:Name="btnLimpar" Height="30" BorderThickness="5"  Canvas.Left="234" Canvas.Top="593" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnLimpar_Click">
+                <Grid Width="130">
+                    <materialDesign:PackIcon Kind="Textbox"/>
+                    <TextBlock Text="Limpar" HorizontalAlignment="Left" Margin="43,0,0,0"/>
+                </Grid>
+            </Button>
+        </Canvas>
+
+        <Canvas Name="cvConsulta" Margin="10,135,10,10" RenderTransformOrigin="0.377,0.49" Background="White">
+            <TextBox x:Name="txbBusca" TextWrapping="Wrap"  Width="480" materialDesign:HintAssist.Hint="Produto" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Canvas.Left="10" Canvas.Top="27" RenderTransformOrigin="0.4,4.178" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnBuscar" Height="30" BorderThickness="5" Canvas.Left="495" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Click="btnBuscar_Click">
+                <Grid Width="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="18*"/>
+                    </Grid.RowDefinitions>
+                    <materialDesign:PackIcon Kind="Search" Grid.RowSpan="2"/>
+                    <TextBlock Text="Buscar" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+                </Grid>
+            </Button>
+            <Border BorderBrush="#FF00B9FF"  BorderThickness="0 5 0 0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="610" Height="529" Canvas.Top="91" Canvas.Left="10">
+                <DataGrid x:Name="DataGridViewProdutos" Background="#B2DCDCDC"  CanUserResizeColumns="False" CanUserReorderColumns="False" IsReadOnly="True" AutoGenerateColumns="False" EnableColumnVirtualization="True" EnableRowVirtualization="True" Canvas.Left="32" Canvas.Top="88" Margin="0,5,0,0"  MouseDoubleClick="DataGridViewProdutos_MouseDoubleClick">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Cod}" Header="Cod"/>
+                        <DataGridTextColumn Binding="{Binding Descricao}" Header="Descrição" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding Grupo}" Header="Grupo"/>
+                        <DataGridTextColumn Binding="{Binding PrecoCusto, StringFormat=R$ {0:F}}" Header="Preço Custo"/>
+                        <DataGridTextColumn Binding="{Binding PrecoVenda, StringFormat=R$ {0:F}}" Header="Preço Venda"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Canvas>
+    </Grid>
+</Window>

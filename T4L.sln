@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T4L.WebApi", "T4L.WebApi\T4L.WebApi.csproj", "{8E5EDE95-CF39-409F-8F30-CBD959CB5344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4L.WPF", "T4L.WPF\T4L.WPF.csproj", "{C031ABD8-8919-48D1-B913-8AA1A33E4FB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T4L.Domain", "T4L.Domain\T4L.Domain.csproj", "{B558E358-1143-4BE8-A0EE-AFEB88A6F785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E5EDE95-CF39-409F-8F30-CBD959CB5344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5EDE95-CF39-409F-8F30-CBD959CB5344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5EDE95-CF39-409F-8F30-CBD959CB5344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5EDE95-CF39-409F-8F30-CBD959CB5344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C031ABD8-8919-48D1-B913-8AA1A33E4FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C031ABD8-8919-48D1-B913-8AA1A33E4FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C031ABD8-8919-48D1-B913-8AA1A33E4FB7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C031ABD8-8919-48D1-B913-8AA1A33E4FB7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B558E358-1143-4BE8-A0EE-AFEB88A6F785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B558E358-1143-4BE8-A0EE-AFEB88A6F785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B558E358-1143-4BE8-A0EE-AFEB88A6F785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B558E358-1143-4BE8-A0EE-AFEB88A6F785}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B791CFE-DFEC-453E-A643-45825A4BA27B}
+	EndGlobalSection
+EndGlobal
